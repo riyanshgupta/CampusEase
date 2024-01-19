@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+</head>
+
+<body class="body">
+    <style>
+        body {
+            --tw-bg-opacity: 1;
+            background-color: rgb(17 23 34/var(--tw-bg-opacity));
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1440' height='1265' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cfilter x='-17.6%25' y='-34.2%25' width='135.1%25' height='168.4%25' filterUnits='objectBoundingBox' id='b'%3e%3cfeGaussianBlur stdDeviation='50' in='SourceGraphic'/%3e%3c/filter%3e%3cfilter x='-23.6%25' y='-187.5%25' width='147.2%25' height='475%25' filterUnits='objectBoundingBox' id='d'%3e%3cfeGaussianBlur stdDeviation='50' in='SourceGraphic'/%3e%3c/filter%3e%3cfilter x='-23.6%25' y='-187.5%25' width='147.2%25' height='475%25' filterUnits='objectBoundingBox' id='e'%3e%3cfeGaussianBlur stdDeviation='50' in='SourceGraphic'/%3e%3c/filter%3e%3cfilter x='-23.6%25' y='-187.5%25' width='147.2%25' height='475%25' filterUnits='objectBoundingBox' id='g'%3e%3cfeGaussianBlur stdDeviation='50' in='SourceGraphic'/%3e%3c/filter%3e%3clinearGradient x1='98.284%25' y1='37.276%25' x2='9.488%25' y2='37.276%25' id='a'%3e%3cstop stop-color='%236366F1' offset='0%25'/%3e%3cstop stop-color='%236366F1' stop-opacity='0' offset='100%25'/%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='37.276%25' x2='9.488%25' y2='37.276%25' id='c'%3e%3cstop stop-color='%2338BDF8' offset='0%25'/%3e%3cstop stop-color='%2338BDF8' stop-opacity='0' offset='100%25'/%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='37.276%25' x2='9.488%25' y2='37.276%25' id='f'%3e%3cstop stop-color='%236EE7B7' offset='0%25'/%3e%3cstop stop-color='%236EE7B7' stop-opacity='0' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg fill='none' fill-rule='evenodd'%3e%3cpath fill='url(%23a)' filter='url(%23b)' d='M262.132 307.493 253.019 438.5l844.887-307.493L1107.019 0z' transform='translate(-.103 -152)'/%3e%3cpath fill='url(%23c)' filter='url(%23d)' transform='rotate(-20 296.964 770.578)' d='m446.117 806.285-35.584 80h599.418l35.582-80z'/%3e%3cpath fill='url(%23a)' filter='url(%23e)' transform='rotate(-20 29.964 1143.578)' d='m179.117 1179.285-35.584 80h599.418l35.582-80z'/%3e%3cpath fill='url(%23f)' filter='url(%23g)' transform='rotate(-20 156.964 105.578)' d='m306.117 141.285-35.584 80h599.418l35.582-80z'/%3e%3c/g%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        h1 {
+            color: azure;
+        }
+    </style>
+
+
+    <!-- Modal toggle -->
+    <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+        class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+        font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        type="button">
+         Mess Complain Form
+    </button>
+
+    <!-- Main modal -->
+    <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-md max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="authentication-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="px-6 py-6 lg:px-8">
+                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Mess Complain Form</h3>
+                    <form class="space-y-6" action="#">
+                        <div>
+
+                            <label for="email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mess Name</label>
+
+
+                            <button id="dropdownRadioBgHoverButton" data-dropdown-toggle="dropdownRadioBgHover"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
+                                text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Select Hostel <svg
+                                    class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdownRadioBgHover"
+                                class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownRadioBgHoverButton">
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-4"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Vikramashila
+                                                Hostel Center Mess</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    <form class="space-y-6" action="#">
+                        <div>
+
+                            <label for="email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Meal Timing</label>
+
+
+                            <button id="dropdownRadioBgHoverButton2" data-dropdown-toggle="dropdownRadioBgHover2"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium 
+                                rounded-lg 
+                                text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 
+                                dark:focus:ring-blue-800" type="button">Select Hostel <svg
+                                    class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdownRadioBgHover2"
+                                class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownRadioBgHoverButton">
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-4"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Breakfast</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-4"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Lunch</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-4"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Snacks</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-4"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Dinner</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div>
+
+                            <label for="email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Complain
+                                type</label>
+
+                            <button id="dropdownRadioBgHoverButton" data-dropdown-toggle="dropdownRadioBgHover1" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+                                font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 
+                                dark:focus:ring-blue-800" type="button">Select Type<svg class="w-2.5 h-2.5 ml-2.5"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdownRadioBgHover1"
+                                class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownRadioBgHoverButton">
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-4"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Food Quality</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input checked id="default-radio-5" type="radio" value=""
+                                                name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-5"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Staff Behaviour</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-6" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-6"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Shortage of Food</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-6" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-6"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Cleanliness</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+                                            <input id="default-radio-6" type="radio" value="" name="default-radio"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                            <label for="default-radio-6"
+                                                class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Other</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div>
+                            <label for="email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Complain
+                                Details</label>
+                            <input type="email" name="email" id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
+                          focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 
+                          dark:text-white"
+                                placeholder="Type your complain here.." required>
+                        </div>
+                        <div>
+                            <label for="password"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile
+                                Number</label>
+                            <input type="password" name="password" id="password" placeholder="987XXXXXXX"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
+                                focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 
+                                dark:text-white"
+                                required>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+                      focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <ul class="flex justify-center text-lg font-medium text-center rounded-tl-lg shadow mycontainer ml-4 mr-4 mt-4"
+        id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+        <li class="w-full">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about"
+                aria-selected="true"
+                class="inline-block p-2 text-purple-400 rounded-tl-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300 w-full">Found</button>
+        </li>
+        <li class="w-full">
+            <button id="statistics-tab" data-tabs-target="#statistics" type="button" role="tab"
+                aria-controls="statistics" aria-selected="false"
+                class="inline-block p-2 rounded-tr-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300 w-full">Lost</button>
+        </li>
+    </ul>
+
+    <div class="rounded-lg shadow ml-4 mr-4 mt-2 mycontainer" style="position: relative; z-index: -1;">
+
+        <div id="defaultTabContent">
+
+            <div class="hidden p-4 rounded-lg md:p-8 flex items-center justify-center flex-col" id="about" role="tabpanel" aria-labelledby="about-tab">
+
+
+
+                <a href="#"
+                    class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                    <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                        src="{{ url_for('static', filename='watch.jpeg') }}" alt="" style="max-height:100%; max-width: 100%">
+                    <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                        <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Smart Watch</h3>
+                        <p class="mt-3 font-normal text-gray-700 dark:text-gray-100">Found in G01 Lab at 1:02 am</p>
+                        <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 12 Aug 2023</p>
+                    </div>
+                </a>
+
+                <!-- <a href="#"
+                    class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                    <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                        src="{{ url_for('static', filename='earpods.webp')}}" alt="" style="max-height:100%; max-width: 100%">
+                    <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                        <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Boats Airdopes</h3>
+                        <p class="mt-3 font-normal text-gray-700 dark:text-gray-100">Found in New Boys hostel mess</p>
+                        <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 12 Aug 2023</p>
+                    </div>
+                </a> -->
+
+                <!-- <a href="#"
+                    class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                    <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                        src="{{url_for('static', filename='watch.png')}}" alt="" style="max-height:100%; max-width: 100%">
+                    <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                        <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Something offensive</h3>
+                        <p class="mt-3 font-normal text-gray-700 dark:text-gray-200">Found at CP Lab in morning</p>
+                        <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 12 Aug 2023</p>
+                    </div>
+                </a> -->
+
+            </div>
+
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="statistics" role="tabpanel"
+                aria-labelledby="statistics-tab">
+                <dl
+                    class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+                    <div class="flex flex-col">
+                        <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
+                    </div>
+                    <div class="flex flex-col">
+                        <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Public repositories</dd>
+                    </div>
+                    <div class="flex flex-col">
+                        <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Open source projects</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+<script src="{{url_for('static', filename = 'landf.js')}}"></script>
+{% endblock content %}

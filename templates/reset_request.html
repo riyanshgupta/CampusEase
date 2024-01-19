@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Recovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+</head>
+
+<body class="body">
+  {% if msg %}
+        <div id="alert-4" class="flex items-center justify-center p-3 text-yellow-800 rounded-lg bg-yellow-50 mycontainer dark:text-yellow-500 mt-1 mr-2 ml-2" role="alert">
+          <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+          </svg>
+          <span class="sr-only">Info</span>
+          <div class="flex justify-center items-center ml-3 text-sm font-medium">
+            {{msg}}
+          </div>
+          <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-yellow-50 text-yellow-500 rounded-lg  p-1.5 hover:bg-yellow-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-yellow-300 dark:hover:bg-gray-700" data-dismiss-target="#alert-4" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+          </button>
+        </div>
+
+  {% endif %}
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                <img class="w-7 h-15 mr-2" src="https://conqera.com/careerpath/mobile/images/content/IIT/iit18.png" alt="logo"> <br>
+               <p class=" font-bold tracking-wide italic hover:not-italic">CampusEase</p>
+                
+            </div>
+            <div class="mycontainer w-full p-6 bg-white rounded-lg shadow border md:mt-0 sm:max-w-md dark:bg-gray-800 border-gray-700 sm:p-8" id="container">
+                <h1 class="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                    Forgot your password?
+                </h1>
+                <p class="font-extralight text-gray-500 dark:text-gray-400">Don't fret! Just type in your email and we will send you a code to reset your password!</p>
+                <div class="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                        <input type="email" name="email" id="email" class="inpt bg-white-700 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white mb-2" placeholder="name.roll_no@iiitbh.ac.in" required>
+                      <div id="existence"></div>
+                    </div>
+                    <div class="flex justify-end">
+                        <div class=text-sm">
+                           <a class="term-color font-normal text-primary-600 hover:underline dark:text-primary-500" href="{{ url_for('login') }}">Back To Login</a>
+                        </div>
+                    </div>
+                    <button class="btn-color w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" id="reset-btn">Reset password</button>
+                </div>
+            </div>
+        </div>
+  
+  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"> </script>
+  <link href="{{ url_for('static', filename = 'home_style.css') }}" rel="stylesheet">
+</body>
+
+</html>

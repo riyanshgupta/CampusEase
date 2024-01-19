@@ -1,0 +1,185 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <ul class="flex justify-center text-lg font-medium text-center rounded-tl-lg shadow mycontainer ml-4 mr-4 mt-4"
+        id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+        <li class="w-full">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about"
+                aria-selected="true"
+                class="inline-block p-2 text-purple-400 rounded-tl-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300 w-full">Found</button>
+        </li>
+        <li class="w-full">
+            <button id="statistics-tab" data-tabs-target="#statistics" type="button" role="tab"
+                aria-controls="statistics" aria-selected="false"
+                class="inline-block p-2 rounded-tr-lg hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300 w-full">Lost</button>
+        </li>
+    </ul>
+
+
+<!-- Modal toggle -->
+
+
+<!-- Main modal -->
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 mycontainer">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="px-6 py-6 lg:px-8 ">
+                               <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white ">Found a Product</h3>
+                               <div class="space-y-6">
+
+                                   <div>
+                                       <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="product_name">Product Name</label>
+                                       <input name="product_name" id="product_name"
+                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
+                                     focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white  mycontainer"
+                                           placeholder="Watch" required>
+                                   </div>
+                                 <div>
+                                   <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                       for="item-description">Where you found it?</label>
+                                   <input name="description" id="item-description" required
+                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white mycontainer" type="text"
+                                       placeholder="Where you found it?" required>
+                                 </div>
+                                   <div>
+                                       <label for="mobile_num"
+                                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number
+                                       </label>
+                                       <input name="mobile_num" id="mobile_num" type="number" placeholder="987XXXXXXX" required
+                                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white mycontainer"
+                                           required>
+                                   </div>
+                                 <div>
+                                   <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                       for="hostel-complain-img">Upload
+                                       file</label>
+                                   <input
+                                       class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 mb-5  mycontainer" id="found-item-img" type="file">
+                                 </div>
+                                 <div id="myIcon-2">
+                                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255, 0); display: block;" width="70px" height="30px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                                   <circle cx="25" cy="50" fill="#10cff3" r="25">
+                                     <animate attributeName="cx" repeatCount="indefinite" dur="0.9900990099009901s" keyTimes="0;0.5;1" values="25;75;25" begin="-0.49504950495049505s"></animate>
+                                   </circle>
+                                   <circle cx="75" cy="50" fill="#ff3232" r="25">
+                                     <animate attributeName="cx" repeatCount="indefinite" dur="0.9900990099009901s" keyTimes="0;0.5;1" values="25;75;25" begin="0s"></animate>
+                                   </circle>
+                                   <circle cx="25" cy="50" fill="#10cff3" r="25">
+                                     <animate attributeName="cx" repeatCount="indefinite" dur="0.9900990099009901s" keyTimes="0;0.5;1" values="25;75;25" begin="-0.49504950495049505s"></animate>
+                                     <animate attributeName="fill-opacity" values="0;0;1;1" calcMode="discrete" keyTimes="0;0.499;0.5;1" dur="0.9900990099009901s" repeatCount="indefinite"></animate>
+                                   </circle>
+                                   </svg>
+                                 </div>
+                                 <div id="report-msg-2">
+                                   </div>
+                                 <div id="btn-html-2">
+                                   <button type="submit"
+                                       class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+                                         focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                       id='submit-btn-found'>Submit</button>
+                                 </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div> 
+    <div id="overall_tab_content"class="rounded-lg shadow ml-4 mr-4" style="background-color: rgb(255, 255, 255, 0);">
+
+        <div id="defaultTabContent">
+
+            <div class="hidden p-4 rounded-lg md:p-8 flex items-center justify-center flex-col" id="about" role="tabpanel" aria-labelledby="about-tab">
+<!--  -->
+              <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" id="add-items" class="flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-3" type="button">
+                Add items
+                <svg class="w-5 h-5 ml-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z"/>
+                </svg>
+              </button>
+<div class="inline-flex items-center justify-center flex-wrap w-full mt-4">
+              {% for id in items %}
+                <div class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                    <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                        src="{{ items[id]['image'] }}" alt="" style="max-height:100%; max-width: 100%">
+                    <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                        <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{{ items[id]['product_name'] }}</h3>
+                       <p class="mt-3"> <span class="mt-3 font-normal text-gray-700 dark:text-gray-100">Founded:</span><span class="mt-3 font-normal text-gray-700 dark:text-gray-400"> {{ items[id]['product_description'] }}</span> <span class="mt-3 font-normal text-gray-700 dark:text-gray-100">Contact:</span><span class="mt-3 font-normal text-gray-700 dark:text-gray-400"> {{ items[id]['contact_number'] }}</span></p>
+                        <p><span class="mt-3 font-normal text-gray-700 dark:text-gray-100 bottom">Posted on</span><span class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom"> {{ items[id]['date_posted'] }}</span></p>
+
+                      <button type="button" id="claim-{{id}}" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 mt-3" name="claim-btn"> Claim
+                        <!-- {% if items[id]['claimed'] == 1 %}
+                        Already Claimed 
+                        <p class="mt-1 font-normal text-gray-700 dark:text-gray-400 ">By
+                          {{ items[id]['email']}}
+                        </p>
+                      {% else %}
+                      {{ items[id]['claimed']}}
+                      {% endif %} -->
+                        </button>
+                    </div>
+                </div>
+              {% endfor %}
+
+            </div>
+              </div>
+            <div class="" id="statistics" role="tabpanel"
+                aria-labelledby="statistics-tab">
+               <div class="inline-flex items-center justify-center flex-wrap w-full mt-4" style="position: absolute; z-index: -1;">
+                  <div class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                      <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                          src="{{url_for('static', filename='watch.png')}}" alt="" style="max-height:100%; max-width: 100%">
+                      <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                          <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Digital Watch</h3>
+                          <p class="mt-3 font-normal text-gray-700 dark:text-gray-200">Found at CP Lab in morning</p>
+                          <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 12 Aug 2023</p>
+                        <button type="button" id="found-btn1" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 mt-3">I Found</button>
+                      </div>
+                  </div>
+
+              <div class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                  <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                      src="{{url_for('static', filename='umb.jpg')}}" alt="" style="max-height:100%; max-width: 100%">
+                  <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                      <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Umbrella</h3>
+                      <p class="mt-3 font-normal text-gray-700 dark:text-gray-200">Found at C101 in evening</p>
+                      <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 11 May 2023</p>
+                    <button type="button" id="found-btn2" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 mt-3">I Found</button>
+                  </div>
+              </div>
+
+                 <div class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                     <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                         src="{{url_for('static', filename='earpods.webp')}}" alt="" style="max-height:100%; max-width: 100%">
+                     <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                         <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Earpods</h3>
+                         <p class="mt-3 font-normal text-gray-700 dark:text-gray-200">Found at mess in morning</p>
+                         <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 12 Aug 2023</p>
+                       <button type="button" id="found-btn3" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 mt-3">I Found</button>
+                     </div>
+                 </div>
+                 <div class="m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card" style="width:100%">
+                     <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                         src="{{url_for('static', filename='laptop.jpeg')}}" alt="" style="max-height:100%; max-width: 100%">
+                     <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                         <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Laptop Charger</h3>
+                         <p class="mt-3 font-normal text-gray-700 dark:text-gray-200">Found at new boys hostel in afternoon</p>
+                         <p class="mt-3 font-normal text-gray-700 dark:text-gray-400 bottom">Posted on 01 Nov 2023</p>
+                       <button type="button" id="found-btn4" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 mt-3">I Found</button>
+                     </div>
+                 </div>                 
+                
+            </div>
+            </div>
+        </div>
+    </div>
+<script src="{{url_for('static', filename = 'landf.js')}}"></script>
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <!-- cards -->
+    <div class="" style="position: relative;">
+    <div class="inline-flex items-center justify-center flex-wrap w-full mt-4 cards" style="position: absolute; z-index: -1;">
+        <a href="{{url_for('hostelcomplain')}}"
+            class="border border-gray-700 m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl a-card">
+            <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                src="{{url_for('static', filename='hostel.jpg')}}" alt="">
+            <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Hostel Affairs</h3>
+                <p class="mt-3 font-normal text-gray-700 dark:text-gray-400">Facing problems in Hostel/Room? No
+                    worries,register all Hostel related complaints/issues here.</p>
+            </div>
+        </a>
+        <a href="{{url_for('messcomplain')}}"
+            class="border border-gray-700 m-2 flex flex-col items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl dark:bg-gray-800 a-card">
+            <img class="object-cover w-auto rounded-t-lg h-auto sm:h-auto sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                src="{{url_for('static', filename='mess.jpg')}}" alt="">
+            <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Mess Affairs</h3>
+                <p class="mt-3 font-normal text-gray-700 dark:text-gray-400">Now
+                    register all your Mess/Food related issues here and we'll take your issues to the authorities</p>
+            </div>
+        </a>
+        <a href="{{url_for('buyandsell')}}"
+            class="m-2 flex flex-col items-center items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl a-card">
+            <img class="object-cover w-auto rounded-t-lg h-auto sm:h-44 sm:w-56 sm:rounded-none sm:rounded-l-lg"
+                src="{{url_for('static', filename='sell-books.jpg')}}" alt="">
+            <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+                <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Buy and Sell</h3>
+                <p class="mt-3 font-normal text-gray-700 dark:text-gray-400">Discover online hub for buying and selling used college items. Find budget-friendly essentials and declutter effortlessly while fostering community connections.</p>
+            </div>
+        </a>
+        <a href="{{url_for('lostandfound')}}"
+        class="m-2 flex flex-col items-center items-center bg-white rounded-lg shadow sm:flex-row sm:max-w-xl a-card">
+        <img class="object-cover w-auto rounded-t-lg h-auto sm:h-44 sm:w-56 sm:rounded-none sm:rounded-l-lg"
+            src="{{url_for('static', filename='L&F_final.png')}}" alt="">
+        <div class="p-4 flex flex-col justify-between px-4 leading-normal">
+            <h3 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Lost and Found</h3>
+            <p class="mt-3 font-normal text-gray-700 dark:text-gray-400">Misplaced belongings? Navigate to our Lost & Found section. Rediscover what's missing within our college network. Reconnection starts here</p>
+        </div>
+    </a>
+    </div>
+</div>
+{% endblock content %}

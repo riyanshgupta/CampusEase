@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset_token</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</head>
+<body class="body">
+     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+       <div class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+           <img class="w-7 h-15 mr-2" src="https://conqera.com/careerpath/mobile/images/content/IIT/iit18.png" alt="logo"> <br>
+          <p class="  md:text-3xl font-bold tracking-wide italic hover:not-italic " >CampusEase</p>
+       </div>
+         <div class="mycontainer w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+             <h2 class="mb-1 text-2xl font-semibold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                 Change Password
+             </h2>
+             <form class="mt-4 space-y-4 lg:mt-5 md:space-y-5" method="POST">
+                 {{ form.hidden_tag() }}
+                 <div>
+                     <label for="password" class="block mb-2 text-sm font-light text-gray-900 dark:text-white">New Password</label>
+                  {{ form.password(class="inpt bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder='Password', id="password", placeholder="••••••••", pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,}" ) }}
+                <span id="message"> </span>
+                 </div>   
+                 <div>
+                     <label for="confirm-password" class="block mb-2 text-sm font-light text-gray-900 dark:text-white">Confirm Password</label>
+                   {{ form.new_password(class="inpt bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", id="confirm-password", placeholder="••••••••") }}
+                 </div>
+               {{ form.submit(class="btn-color w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800") }}
+             </form>
+          
+           <h2 class="mt-2 mb-2 text-lg font-light-2 text-white-900 dark:text-white">Password requirements:</h2>
+           <ul class="max-w-md space-y-1 text-gray-500 text-sm list-inside dark:text-gray-400">
+               <li class="flex items-center" id="chk1">
+                   <svg class=" w-3.5 h-3.5 mr-2  flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" >
+                       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                    </svg>
+                   At least 8 characters
+               </li>
+               <li class="flex items-center" id="chk2">
+                   <svg class="w-3.5 h-3.5 mr-2 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                    </svg>
+                   At least one uppercase and lowercase character
+               </li>
+               <li class="flex items-center" id="chk3">
+                   <svg class="w-3.5 h-3.5 mr-2 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                    </svg>
+                   At least one special character, e.g., ! @ # ?
+               </li>
+             <li class="flex items-center" id="chk4">
+                 <svg class="w-3.5 h-3.5 mr-2 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                 At least one digit
+             </li>
+           </ul>
+         </div>
+     </div>
+  <link href="{{ url_for('static', filename='home_style.css') }}" rel="stylesheet">
+</body>
+<script>
+  let pass = document.getElementById('password');
+  let msg = document.getElementById('message');
+  let char_count = document.getElementById('chk1');
+  let capital = document.getElementById('chk2');
+  let special = document.getElementById('chk3');
+  let digit = document.getElementById('chk4');
+  
+  const containsSpecialChars = str => /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(str);
+  const containsUppercase = str => /[A-Z]/.test(str);
+  const containsLowercase = str => /[a-z]/.test(str);
+  const containsNumbers = str => str.match(/\d/) !== null;
+  
+  function tell_strength(value){
+    if(containsNumbers(value)) digit.style.color = "rgb(34 197 94)";
+    else digit.style = "none";
+    if(containsUppercase(value) && containsLowercase(value)) capital.style.color = "rgb(34 197 94)"; 
+    else capital.style = "none";
+    if(containsSpecialChars(value)) special.style.color = "rgb(34 197 94)";
+    else special.style = "none";
+    if(value.length==0){
+      msg.innerHTML = "";
+      pass.style = "none";
+      char_count.style="none";
+    }
+    if(value.length>=8) char_count.style.color = "rgb(34 197 94)";
+    if(value.length>0 && pass.value.length<8){
+      msg.innerHTML = "Password is weak";
+      msg.style.color = "red";
+      pass.style.borderColor = "red";
+      char_count.style="none";
+    }
+    else if(value.length>=8 && containsUppercase(value) && containsSpecialChars(value)){
+      msg.innerHTML = "Password is strong";
+      msg.style.color = "green";
+      pass.style.borderColor = "green";
+    }
+  }
+  pass.addEventListener('keydown',(e)=>{ 
+    setTimeout(()=>{
+     tell_strength(pass.value)
+    }, 0.1);
+  })
+</script>
+</html>
