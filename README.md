@@ -12,7 +12,7 @@ CampusEase is a comprehensive web application designed to simplify campus life b
 - **Password Reset:** Securely reset passwords in case of forgotten credentials.
 
 ## Technologies Used 💻 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="30px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/50px-Python-logo-notext.svg.png" alt="Python Logo" height="30px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Bcrypt-logo.svg/50px-Bcrypt-logo.svg.png" alt="bcrypt Logo" height="50px">  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/50px-JSON_vector_logo.svg.png" alt="JWT Logo" height="50px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="30px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/50px-Python-logo-notext.svg.png" alt="Python Logo" height="30px"> <img src="https://user-images.githubusercontent.com/5418178/177059352-fe91dcd5-e17b-4103-88ae-70d6d396cf85.png" alt="JWT Logo" height="30px"> <img src="https://static-00.iconduck.com/assets.00/flask-icon-1594x2048-84mjydzf.png" alt="Flask Logo" height="30px">
 - Flask 
 - SQLAlchemy (SQLite)  
 - Flask-Mail
