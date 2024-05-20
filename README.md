@@ -13,8 +13,8 @@ CampusEase is a comprehensive web application designed to simplify campus life b
 
 ## Technologies Used 💻
 
-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/50px-Flask_logo.svg.png" alt="Flask Logo" height="50px"> Flask
-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="50px"> SQLAlchemy (SQLite)
+- Flask <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/50px-Flask_logo.svg.png" alt="Flask Logo" height="30px"> 
+- SQLAlchemy (SQLite) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="30px"> 
 - Flask-Mail
 - Flask-Login
 - Flask-WTF
