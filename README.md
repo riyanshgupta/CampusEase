@@ -2,6 +2,7 @@
 
 CampusEase is a comprehensive web application designed to simplify campus life by providing various features and functionalities for students and staff members.
 
+
 ## Features 🚀
 
 - **Hostel Complaints:** Report issues related to hostel maintenance, cleanliness, etc.
@@ -12,8 +13,8 @@ CampusEase is a comprehensive web application designed to simplify campus life b
 
 ## Technologies Used 💻
 
-- ![Flask Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png) Flask
-- ![SQLite Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/1200px-Sqlite-square-icon.svg.png) SQLAlchemy (SQLite)
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/50px-Flask_logo.svg.png" alt="Flask Logo" height="50px"> Flask
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="50px"> SQLAlchemy (SQLite)
 - Flask-Mail
 - Flask-Login
 - Flask-WTF
@@ -29,7 +30,7 @@ CampusEase is a comprehensive web application designed to simplify campus life b
 4. Configure application settings.
 5. Initialize the database (`flask db init`, `flask db migrate`, `flask db upgrade`).
 6. Run the Flask application (`python app.py`).
-7. 
+
 
 ## Acknowledgments 🙏
 
