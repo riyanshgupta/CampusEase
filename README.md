@@ -11,10 +11,10 @@ CampusEase is a comprehensive web application designed to simplify campus life b
 - **Buying and Selling:** Facilitate buying and selling of products among campus members.
 - **Password Reset:** Securely reset passwords in case of forgotten credentials.
 
-## Technologies Used 💻
-
-- Flask <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/50px-Flask_logo.svg.png" alt="Flask Logo" height="30px"> 
-- SQLAlchemy (SQLite) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="30px"> 
+## Technologies Used 💻 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/50px-Sqlite-square-icon.svg.png" alt="SQLite Logo" height="30px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/50px-Python-logo-notext.svg.png" alt="Python Logo" height="30px"> 
+- Flask 
+- SQLAlchemy (SQLite)  
 - Flask-Mail
 - Flask-Login
 - Flask-WTF
